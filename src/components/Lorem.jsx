@@ -37,6 +37,8 @@ const Lorem = () => {
        
     </section>
     <p>{paragraph.map((x)=>x)}</p>
+    {/*Error*/}
+    {/* <p>{paragraph}</p>  */}
     </div>
   )
 }
