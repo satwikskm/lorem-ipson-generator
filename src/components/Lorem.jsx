@@ -18,7 +18,7 @@ const Lorem = () => {
 
     }
   return (
-      <article>
+    <div>
     <section>
         <div className="nav">
             <h1>Lorem Ipsum Generator</h1>
@@ -36,8 +36,8 @@ const Lorem = () => {
         </form>
        
     </section>
-    <p>{paragraph}</p>
-    </article>
+    <p>{paragraph.map((x)=>x)}</p>
+    </div>
   )
 }
 
