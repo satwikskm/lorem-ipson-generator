@@ -36,9 +36,9 @@ const Lorem = () => {
         </form>
        
     </section>
-    <p>{paragraph.map((x)=>x)}</p>
+    {/* <p>{paragraph.map((x)=>x)}</p> */}
     {/*Error*/}
-    {/* <p>{paragraph}</p>  */}
+    <p>{paragraph}</p> 
     </div>
   )
 }
