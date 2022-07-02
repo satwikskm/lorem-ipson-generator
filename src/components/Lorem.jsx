@@ -6,7 +6,7 @@ import './lorem.css'
 
 const Lorem = () => {
     const [paragraph,setData]=useState([])
-    const [counter,setCounter]=useState()
+    const [counter,setCounter]=useState(0)
 
     const submitHandle = (e) =>{
         e.preventDefault()
