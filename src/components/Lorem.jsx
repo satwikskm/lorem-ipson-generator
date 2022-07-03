@@ -11,17 +11,34 @@ const Lorem = () => {
     
 
     const submitHandle = (e) =>{
-        e.preventDefault()
         
-        let index = parseInt(counter)
+        e.preventDefault()
+        if(counter > 0 && counter < data.length){
+            let index = parseInt(counter)
         setData(data.slice(0,index))
         setvalue(true)
+        // document.getElementsByClassName('paragraph').classList.style.display = 'block'
+        document.getElementById('par').style.display="block"
+
+        }
+        else{
+            document.getElementById('par').style.display="none"
+
+        }
+        
         
         
 
 
     }
 const Text = () =>{
+    if(counter > 6){
+        return(
+            <div>
+                <h1>Maximum limit reached</h1>
+            </div>
+        )
+    }
     
     if(counter > 0 && value){
     return(
@@ -31,10 +48,11 @@ const Text = () =>{
         </div>
     )}
     else{
+        return(
         <div>
         <h1>We are working on it</h1>
     </div>
-
+        )
     }
 }
   return (
@@ -62,7 +80,7 @@ const Text = () =>{
     </section>
     <div className="text-class">
     {/* <p>{paragraph.map((x)=>x)}</p> */}
-    <div className="paragraph">
+    <div className="paragraph" id="par">
     {paragraph.map((item, index) => (
           <p key={index}>{item}</p>
         ))}
